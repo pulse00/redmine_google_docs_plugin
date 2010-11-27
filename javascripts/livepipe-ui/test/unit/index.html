@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>LivePipe UI Test Suite</title>
+	<link rel="stylesheet" href="../../vendor/qunit/qunit/qunit.css" type="text/css" media="screen">
+	<script src="../../vendor/qunit/qunit/qunit.js"></script>
+    <script src="../../lib/prototype.js"></script>
+    <script src="../../lib/effects.js"></script>
+    <script src="../../lib/dragdrop.js"></script>
+    <script src="../../src/livepipe.js"></script>
+    <script src="../../src/contextmenu.js"></script>
+    <script src="../../src/hotkey.js"></script>
+    <script src="../../src/rating.js"></script>
+    <script src="../../src/selectmultiple.js"></script>
+    <script src="../../src/window.js"></script>
+	<script src="livepipe.js"></script>
+	<script src="contextmenu.js"></script>
+	<script src="hotkey.js"></script>
+	<script src="rating.js"></script>
+	<script src="selectmultiple.js"></script>
+	<script src="window.js"></script>
+</head>
+<body>
+    <h1 id="qunit-header"><a href=".">LivePipe UI Test Suite</a></h1>
+	<h2 id="qunit-banner"></h2>
+	<div id="qunit-testrunner-toolbar"></div>
+	<h2 id="qunit-userAgent"></h2>
+	<ol id="qunit-tests"></ol>
+
+    <!-- elements for tests -->
+        <!-- Control.ContextMenu -->
+        <div id="contextmenu"></div>
+        <!-- Control.Rating -->
+        <select id="rating-select">
+          <option selected="selected">1</option>         
+        </select>
+        <div id="rating"></div>
+        <!-- Control.SelectMultiple -->
+        <select id="selectmultiple">
+          <option value="1">1</option>
+          <option value="2">2</option>
+        </select>
+        <div id="selectmultiple-boxes">
+          <input type="checkbox" value="1" />
+          <input type="checkbox" value="2" />
+        </div>
+        <!-- Control.Window -->
+        <div id="window"></div>
+</body>
+</html>
