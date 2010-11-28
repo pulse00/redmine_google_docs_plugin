@@ -6,8 +6,10 @@ Dispatcher.to_prepare do
   require_dependency 'googledocs_user_patch'
   require_dependency 'googledocs_my_controller_patch'
   require_dependency 'googledocs_custom_fields_helper_patch'
+  require_dependency 'googledocs_issues_helper_patch'  
   
   Issue::SAFE_ATTRIBUTES << "authsubtoken" if Issue.const_defined? "SAFE_ATTRIBUTES"
+  
 end
 
 config.gem 'gdata', :lib => 'gdata'
