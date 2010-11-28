@@ -6,11 +6,17 @@ module GoogleDocsPlugin
      
      def view_my_account(context={ })
        
+       port = context[:request].port
+       
+       if port == 443       
+         port = 80           
+       end
+       
        next_url = url_for({
          :controller => 'authsubs', 
          :action => 'finish', 
          :only_path => false, 
-         :host => context[:request].host + ':' + context[:request].port.to_s
+         :host => context[:request].host + ':' + port.to_s
         })        
        
        return context[:controller].send(:render_to_string, {
