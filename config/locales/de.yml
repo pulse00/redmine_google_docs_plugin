@@ -1,3 +1,4 @@
 # German strings go here for Rails i18n
 de:
   google_docs: "Google Docs"
+  gdocs_connect: "Verbinden"

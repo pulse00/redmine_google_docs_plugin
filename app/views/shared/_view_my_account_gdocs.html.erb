@@ -4,4 +4,9 @@
   <%= label :googledocs, :account_email %>
   <%= text_field :googledocs, :account_email, :value => account_email %>
 </p>
+<p>
+  <%= label :googledocs, :app_domain %>
+  <%= text_field :googledocs, :app_domain, :value => app_domain %>
+</p>
+<%= link_to(l(:gdocs_connect), authsub_link)%>
 </div>

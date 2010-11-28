@@ -19,12 +19,16 @@ module GoogleDocsPlugin
       def save_googledocs_preferences
         if request.post? && flash[:notice] == l(:notice_account_updated)
           email = (params[:googledocs] ? params[:googledocs][:account_email] : '').to_s
+          domain = (params[:googledocs] ? params[:googledocs][:app_domain] : '').to_s          
           
           if email == '' || email.match(/^([^@\s]+)@((?:[-a-z0-9]+\.)+[a-z]{2,})$/i)
             User.current.googledocs_preference(:account_email, email)
           else
             flash[:error] = "Invalid email address #{email}"
           end
+          
+          User.current.googledocs_preference(:app_domain, domain)
+          
         end
       end
     end

@@ -1,0 +1,5 @@
+<ul>
+  <% @feed.elements.each('entry') do |entry| %>
+    <li><%= entry.elements['title'].text %></li>    
+  <% end %>
+</ul>

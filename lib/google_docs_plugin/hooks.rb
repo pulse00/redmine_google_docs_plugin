@@ -4,11 +4,23 @@ module GoogleDocsPlugin
    
    class LayoutHook < Redmine::Hook::ViewListener
      
-     
      def view_my_account(context={ })
+       
+       next_url = url_for({
+         :controller => 'authsubs', 
+         :action => 'finish', 
+         :only_path => false, 
+         :host => context[:request].host + ':' + context[:request].port.to_s
+        })        
+       
        return context[:controller].send(:render_to_string, {
            :partial => 'shared/view_my_account_gdocs',
-           :locals => {:user => context[:user], :account_email => context[:user].googledocs_preference(:account_email) }
+           :locals => {
+             :user => context[:user], 
+             :account_email => context[:user].googledocs_preference(:account_email),
+             :app_domain => context[:user].googledocs_preference(:app_domain),
+             :authsub_link => context[:user].authsub_link(next_url)
+           }
          })
      end
      
@@ -21,8 +33,6 @@ module GoogleDocsPlugin
          })
      
      end
-     
-     
     end 
   end
 end

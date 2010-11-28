@@ -1,4 +1,5 @@
 require_dependency 'user'
+include ActionController::UrlWriter
 
 module GoogleDocsPlugin
   module UserPatch
@@ -12,6 +13,18 @@ module GoogleDocsPlugin
   
     module InstanceMethods
   
+  
+        def authsub_link(next_url)
+        
+          client = GData::Client::DocList.new
+          secure = false  # set secure = true for signed AuthSub requests
+          sess = true
+          domain = googledocs_preference(:app_domain)  # force users to login to a Google Apps hosted domain
+          return authsub_link = client.authsub_url(next_url, secure, sess, domain)
+          
+        end
+        
+        
         def googledocs_preference(attr, set_to = nil)
           prefixed = "googledocs_#{attr}".intern
           v = self.pref[prefixed]
@@ -19,7 +32,7 @@ module GoogleDocsPlugin
 
 
           case attr
-            when :account_email
+            when :account_email, :app_domain
               if !v && (!set_to)
                 set_to = ''
               end

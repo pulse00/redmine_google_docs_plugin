@@ -1,0 +1,2 @@
+module AuthsubsHelper
+end
