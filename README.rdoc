@@ -20,7 +20,7 @@ is shown, it displays a link to the corresponding document.
     git clone git@github.com:pulse00/redmine_google_docs_plugin.git
 
 
-* Run the plugin:migrate task to update the database
+* Run the plugin:migrate task to update the database (from redmines root directory)
 
     rake db:migrate_plugins RAILS_ENV=production
 
