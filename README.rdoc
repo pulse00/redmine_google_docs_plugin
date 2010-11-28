@@ -32,6 +32,9 @@ You have 2 choices to get the plugin:
     tar -xf redmine_google_docs_plugin-vX.X.X.tar.gz redmine_google_docs_plugin
 
 
+
+=== Install the plugin
+
 * Run the plugin:migrate task to update the database (from redmines root directory)
 
     rake db:migrate_plugins RAILS_ENV=production
