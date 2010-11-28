@@ -31,9 +31,9 @@ is shown, it displays a link to the corresponding document.
 == Usage
 
 
-The db:migrate_plugins task creates a new custom field named "Google Docs". To make use of the this field, edit
-the field in admin area (Administration -> Custom Fields). Once there, you need to configure which issue 
-trackers show this field.
+The db:migrate_plugins task creates a new custom field named "Google Docs". 
+To make use of the this field, edit the field in admin area (Administration -> Custom Fields). 
+Once there, you need to configure which issue trackers show this field.
 
 The second step is to connect your redmine account to your google docs account:
 
