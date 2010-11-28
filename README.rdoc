@@ -1,3 +1,44 @@
 = google_docs_plugin
 
-Description goes here
+# Overview
+
+This is a simple redmine plugin which lets users link google docs to issues, using a custom field named "Google Doc".
+When editing issues, this field provides autocompletion of the users google docs. When the issue
+is shown, it displays a link to the corresponding document.  
+
+# Installation
+
+1. Clone the plugin into the redmine plugin directory
+
+<pre><code>
+  cd /path/to/redmine/vendor/plugins
+  git clone git@github.com:pulse00/redmine_google_docs_plugin.git
+</code></pre>
+
+2. Run the plugin:migrate task to update the database
+
+<pre><code>
+  rake db:migrate_plugins RAILS_ENV=production
+</code></pre>
+
+3. Restart redmine
+
+
+# Usage
+
+The db:migrate_plugins task creates a new custom field named "Google Docs". To make use of the this field, edit
+the field in admin area (Administration -> Custom Fields). Once there, you need to configure which issue 
+trackers show this field.
+
+The second step is to connect your redmine account to your google docs account:
+
+1. Browse to the "My account" page
+2. Enter the email address of the google docs account you want to connect
+3. If your team uses google apps, provide the domain of your app (example.com)
+4. Save the changes
+5. Click the "Connect" link below the "App domain" field
+6. This will open the google account page, which asks you to grant access to the redmine app.
+7. Click "Grant access"
+8. You will be redirected you your "My account" page of redmine, and should get a confirmation that your account has been connected
+
+After this initial setup, you can edit the "Google Doc" field in issues and select from your documents in the autocompletion.

@@ -22,7 +22,7 @@ Redmine::Plugin.register :redmine_google_docs_plugin do
   author 'Robert Gründler'
   description 'This is a google docs plugin for Redmine'
   version '0.0.1'
-  url 'https://github.com/pulse00/redmine_googledocs_plugin'
+  url 'https://github.com/pulse00/redmine_google_docs_plugin'
   author_url 'https://github.com/pulse00'
 end
 
