@@ -9,10 +9,20 @@ is shown, it displays a link to the corresponding document.
 
 == Installation
 
+=== Prerequisites
+
 * Install the required gdata gem
 
     gem install gdata
 
+
+=== Obtain the source
+
+You have 2 choices to get the plugin:
+
+1. Cloning the repository via git. This requires git to be installed on the server your redmine installation is hosted. Retrieving updates will be easier this way.
+
+2. Downloading the plugin via the download link above.
 
 * Clone the plugin into the redmine plugin directory
 
