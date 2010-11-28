@@ -44,6 +44,6 @@ The second step is to connect your redmine account to your google docs account:
 5. Click the "Connect" link below the "App domain" field
 6. This will open the google account page, which asks you to grant access to the redmine app.
 7. Click "Grant access"
-8. You will be redirected you your "My account" page of redmine, and should get a confirmation that your account has been connected
+8. You will be redirected back to your redmint account page and should see a confirmation that your account has been connected
 
-After this initial setup, you can edit the "Google Doc" field in issues and select from your documents in the autocompletion.
+After this initial setup, you can edit the "Google Doc" field in issues and choose your documents via autocompletion.
