@@ -4,19 +4,19 @@ module GoogleDocsPlugin
    
    class LayoutHook < Redmine::Hook::ViewListener
      
-     def view_my_account(context={ })
-       
-       port = context[:request].port
-       
+     def view_my_account(context={ })       
+       port = context[:request].port       
        if port == 443       
-         port = 80           
+         port = ''          
+       else
+         port = ':' + port.to_s
        end
        
        next_url = url_for({
          :controller => 'authsubs', 
          :action => 'finish', 
          :only_path => false, 
-         :host => context[:request].host + ':' + port.to_s
+         :host => context[:request].host + port
         })        
        
        return context[:controller].send(:render_to_string, {
