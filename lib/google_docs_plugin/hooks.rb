@@ -22,7 +22,7 @@ module GoogleDocsPlugin
          :controller => 'authsubs', 
          :action => 'finish', 
          :only_path => false, 
-         :host => context[:request].host + port
+         :host => context[:request].host + port,
          :protocol => protocol
         })        
        
