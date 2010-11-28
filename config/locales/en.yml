@@ -2,3 +2,8 @@
 en:
   google_docs: "Google Docs"
   gdocs_connect: "Connect"
+  gdocs_disconnect: "Disconnect"  
+  googledoc: "googledoc"
+  gdocs_disconnect_success: "GoogleDocs connection disconnected successfully"
+  gdocs_disconnect_failure: "Error disconnecting your GoogleDocs connection"  
+  gdocs_not_connected: "Your account is not connected to GoogleDocs"  

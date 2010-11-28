@@ -1,5 +1,5 @@
 <ul>
   <% @feed.elements.each('entry') do |entry| %>
-    <li><%= entry.elements['title'].text %></li>    
+    <li id="<%= entry.elements['link'].attribute('href').to_s%>"><%= entry.elements['title'].text %></li>    
   <% end %>
 </ul>

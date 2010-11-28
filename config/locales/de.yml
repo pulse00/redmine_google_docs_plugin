@@ -2,3 +2,8 @@
 de:
   google_docs: "Google Docs"
   gdocs_connect: "Verbinden"
+  gdocs_disconnect: "Verbindung trennen"
+  googledoc: "googledoc"
+  gdocs_disconnect_success: "GoogleDocs Verbindung wurde entfernt"
+  gdocs_disconnect_failure: "Beim Trennen der GoogleDocs Verbindung ist ein Fehler aufgetreten"  
+  gdocs_not_connected: "Ihr Konto ist nicht mit GoogleDocs verbunden"  

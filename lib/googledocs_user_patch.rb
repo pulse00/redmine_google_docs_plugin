@@ -14,14 +14,32 @@ module GoogleDocsPlugin
     module InstanceMethods
   
   
-        def authsub_link(next_url)
-        
-          client = GData::Client::DocList.new
-          secure = false  # set secure = true for signed AuthSub requests
-          sess = true
-          domain = googledocs_preference(:app_domain)  # force users to login to a Google Apps hosted domain
-          return authsub_link = client.authsub_url(next_url, secure, sess, domain)
+  
+        def has_googledocs_connection?
           
+          return !self.authsubtoken.nil? && !self.authsubtoken.empty?
+          
+        end
+  
+        def authsub_link(next_url)
+
+          domain = googledocs_preference(:app_domain)  # force users to login to a Google Apps hosted domain
+          
+          if !domain.nil? && !domain.empty?
+            
+            client = GData::Client::DocList.new
+            secure = false  # set secure = true for signed AuthSub requests
+            sess = true
+            return client.authsub_url(next_url, secure, sess, domain)
+            
+          else 
+
+            scope = 'http://docs.google.com/feeds/'
+            secure = false  # set secure = true for signed AuthSub requests
+            sess = true
+            return GData::Auth::AuthSub.get_url(next_url, scope, secure, sess)            
+            
+          end
         end
         
         
