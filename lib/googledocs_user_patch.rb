@@ -1,5 +1,5 @@
 require_dependency 'user'
-include ActionController::UrlWriter
+
 
 module GoogleDocsPlugin
   module UserPatch
@@ -12,7 +12,6 @@ module GoogleDocsPlugin
     end
   
     module InstanceMethods
-  
   
   
         def has_googledocs_connection?
