@@ -13,8 +13,18 @@ class AuthsubsController < ApplicationController
     client = GData::Client::DocList.new
     client.authsub_token = token
     
+    @docs = {}
+    feed = client.get('http://docs.google.com/feeds/documents/private/full?title=' + params[:q]).to_xml
     
-    @feed = client.get('http://docs.google.com/feeds/documents/private/full?title=' + params[:q]).to_xml
+    feed.elements.each('entry') do |entry|
+      entry.elements.each('link') do |link|      
+        if link.attribute('rel').value == 'alternate'
+          @docs[link.attribute('href').value] = entry.elements['title'].text
+          break
+        end
+      end
+    end
+    
     render :partial => 'listdocs'
   end  
   
