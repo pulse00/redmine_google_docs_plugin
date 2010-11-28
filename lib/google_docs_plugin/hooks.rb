@@ -12,11 +12,18 @@ module GoogleDocsPlugin
          port = ':' + port.to_s
        end
        
+       if context[:request].ssl?
+         protocol = 'https'
+        else
+          protocol = 'http'
+        end
+       
        next_url = url_for({
          :controller => 'authsubs', 
          :action => 'finish', 
          :only_path => false, 
          :host => context[:request].host + port
+         :protocol => protocol
         })        
        
        return context[:controller].send(:render_to_string, {
