@@ -1,12 +1,14 @@
 = google_docs_plugin
 
-# Overview
+Overview
+--------
 
 This is a simple redmine plugin which lets users link google docs to issues, using a custom field named "Google Doc".
 When editing issues, this field provides autocompletion of the users google docs. When the issue
 is shown, it displays a link to the corresponding document.  
 
-# Installation
+Installation
+------------
 
 1. Clone the plugin into the redmine plugin directory
 
@@ -24,7 +26,8 @@ is shown, it displays a link to the corresponding document.
 3. Restart redmine
 
 
-# Usage
+Usage
+-----
 
 The db:migrate_plugins task creates a new custom field named "Google Docs". To make use of the this field, edit
 the field in admin area (Administration -> Custom Fields). Once there, you need to configure which issue 
