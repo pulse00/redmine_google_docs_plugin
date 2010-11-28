@@ -9,6 +9,11 @@ is shown, it displays a link to the corresponding document.
 
 == Installation
 
+* Install the required gdata gem
+
+<pre>
+  gem install gdata
+</pre>
 
 * Clone the plugin into the redmine plugin directory
 
