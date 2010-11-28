@@ -11,7 +11,7 @@ is shown, it displays a link to the corresponding document.
 
 * Install the required gdata gem
 
-  gem install gdata
+    gem install gdata
 
 
 * Clone the plugin into the redmine plugin directory
@@ -22,7 +22,7 @@ is shown, it displays a link to the corresponding document.
 
 * Run the plugin:migrate task to update the database
 
-  rake db:migrate_plugins RAILS_ENV=production
+    rake db:migrate_plugins RAILS_ENV=production
 
 
 * Restart redmine
