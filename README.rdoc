@@ -62,3 +62,10 @@ The second step is to connect your redmine account to your google docs account:
 8. You will be redirected back to your redmint account page and should see a confirmation that your account has been connected
 
 After this initial setup, you can edit the "Google Doc" field in issues and choose your documents via autocompletion.
+
+
+* Thanks
+
+I'd wish to thank the following persons for contributing to this plugin :
+
+* Iacopo Spalletti

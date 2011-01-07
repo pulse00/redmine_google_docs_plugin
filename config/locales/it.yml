@@ -1,0 +1,9 @@
+# English strings go here for Rails i18n
+it:
+  google_docs: "Google Docs"
+  gdocs_connect: "Connetti"
+  gdocs_disconnect: "Disconnetti"  
+  googledoc: "googledoc"
+  gdocs_disconnect_success: "Connessione GoogleDocs rimossa con successo"
+  gdocs_disconnect_failure: "Errore nella rimozione della connessione GoogleDocs"  
+  gdocs_not_connected: "Il tuo account non Ã connesso con GoogleDocs"  
