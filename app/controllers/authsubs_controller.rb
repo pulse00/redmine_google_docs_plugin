@@ -14,7 +14,7 @@ class AuthsubsController < ApplicationController
     client.authsub_token = token
     
     @docs = {}
-    feed = client.get('http://docs.google.com/feeds/documents/private/full?title=' + params[:q]).to_xml
+    feed = client.get('http://docs.google.com/feeds/documents/private/full?title=' + URI.escape(params[:q])).to_xml
     
     feed.elements.each('entry') do |entry|
       entry.elements.each('link') do |link|      
