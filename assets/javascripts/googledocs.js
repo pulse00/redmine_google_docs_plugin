@@ -1,5 +1,5 @@
-document.observe('dom:loaded', function() {
-	
+function observeGoogleDocsField() {
+
 	$$('input.gdocs_input').each(function(element) {
 		
 		var id = element.identify();
@@ -23,4 +23,13 @@ document.observe('dom:loaded', function() {
 				element.value = text;
 		}});		
 	});
+}
+
+
+document.observe('gdocs:load', function(event) {	
+	observeGoogleDocsField();	
+});
+
+document.observe('dom:loaded', function() {
+	observeGoogleDocsField();	
 });

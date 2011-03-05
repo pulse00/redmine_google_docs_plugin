@@ -20,7 +20,9 @@ module GoogleDocsCustomFieldsHelperPatch
           custom_field = custom_value.custom_field
           field_name = "#{name}[custom_field_values][#{custom_field.id}]"
           field_id = "#{name}_custom_field_values_#{custom_field.id}"                    
-          return text_field_tag(field_name, custom_value.value, {:id => field_id, :class => 'gdocs_input'})
+          
+          js = javascript_tag "document.fire('gdocs:load');"
+          return text_field_tag(field_name, custom_value.value, {:id => field_id, :class => 'gdocs_input'}) + js
         else          
           return custom_field_tag_without_google_docs(name, custom_value)        
       end
