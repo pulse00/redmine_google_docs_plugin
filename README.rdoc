@@ -23,7 +23,7 @@ You have 2 choices to get the plugin:
 1. Cloning the repository via git. This requires git to be installed on the server your redmine installation is hosted. Retrieving updates will be easier this way.
 
     cd /path/to/redmine/vendor/plugins
-    git clone git@github.com:pulse00/redmine_google_docs_plugin.git
+    git clone git://github.com/pulse00/redmine_google_docs_plugin.git
 
 
 2. Downloading the plugin via the download link above. 
