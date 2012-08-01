@@ -1,5 +1,14 @@
 = google_docs_plugin
 
+
+== Compatibility
+
+
+The plugin is currently only compatible with redmine version < 2. I'm working on migrating it to redmine 2 in the
+branch `redmine-2`. Any help in this process would be greatly appreciated...
+
+
+
 == Overview
 
 
