@@ -14,6 +14,15 @@ module GoogleDocsIssuesHelperPatch
     # adds the gdocs_input css class to make the autocompletion javascript work
     def render_custom_fields_rows_with_google_docs(issue)	
       
+      logger.debug "################################  aha "
+
+
+      logger.debug issue.custom_field_values.size
+      logger.debug "################################  ahaasdfa "
+
+
+
+
       return if issue.custom_field_values.empty?
       ordered_values = []
       half = (issue.custom_field_values.size / 2.0).ceil

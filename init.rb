@@ -1,7 +1,6 @@
 require 'redmine'
-require 'dispatcher'
 
-Dispatcher.to_prepare do
+ActionDispatch::Callbacks.to_prepare do
   require_dependency 'issue'
   require_dependency 'googledocs_user_patch'
   require_dependency 'googledocs_my_controller_patch'
@@ -12,7 +11,7 @@ Dispatcher.to_prepare do
   
 end
 
-config.gem 'gdata', :lib => 'gdata'
+#config.gem 'gdata', :lib => 'gdata'
 
 require_dependency 'google_docs_plugin/hooks'
 

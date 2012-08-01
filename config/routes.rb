@@ -1,0 +1,1 @@
+match 'authsubs/(:action)', :controller => 'authsubs'

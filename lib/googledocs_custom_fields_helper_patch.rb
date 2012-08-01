@@ -14,8 +14,11 @@ module GoogleDocsCustomFieldsHelperPatch
     # adds the gdocs_input css class to make the autocompletion javascript work
     def custom_field_tag_with_google_docs(name, custom_value)	
       
+      logger.debug "foobar"
+      
       case custom_value.custom_field.field_format
         
+
         when 'googledoc'                  
           custom_field = custom_value.custom_field
           field_name = "#{name}[custom_field_values][#{custom_field.id}]"
